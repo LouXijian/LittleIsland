@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace LittleIsland.Mechanics
 {
     /// <summary>
     /// Implements game physics for some in game entity.
