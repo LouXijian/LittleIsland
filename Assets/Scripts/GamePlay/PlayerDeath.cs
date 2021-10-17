@@ -21,16 +21,16 @@ namespace Platformer.Gameplay
             {
                 player.health.Die();
                 Debug.Log("Dead");
-                model.virtualCamera.m_Follow = null;
-                model.virtualCamera.m_LookAt = null;
+              //  model.virtualCamera.m_Follow = null;
+              //  model.virtualCamera.m_LookAt = null;
                 // player.collider.enabled = false;
                 player.controlEnabled = false;
 
-                if (player.audioSource && player.ouchAudio)
-                    player.audioSource.PlayOneShot(player.ouchAudio);
-                player.animator.SetTrigger("hurt");
+               // if (player.audioSource && player.ouchAudio)
+                //    player.audioSource.PlayOneShot(player.ouchAudio);
+                player.animator.SetTrigger("IsHit");
                 player.animator.SetBool("dead", true);
-                Simulation.Schedule<PlayerSpawn>(2);
+                //Simulation.Schedule<PlayerSpawn>(2);
             }
         }
     }
