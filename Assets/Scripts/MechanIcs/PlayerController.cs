@@ -34,6 +34,12 @@ namespace Platformer.Mechanics
         public Health health;
         public bool controlEnabled = true;
 
+        public GameObject bulletPrefab;
+        protected Vector2 muzzlePos;
+        public float interval;
+        public float timer;
+        float direction;
+
         bool jump;
         Vector2 move;
         SpriteRenderer spriteRenderer;
@@ -49,6 +55,7 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+            direction = 1f;
         }
 
         protected override void Update()
@@ -69,6 +76,14 @@ namespace Platformer.Mechanics
                 move.x = 0;
             }
             UpdateJumpState();
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                direction = 1;
+            } else if(Input.GetAxis("Horizontal") < 0)
+            {
+                direction = -1;
+            }
+            Shoot();
             base.Update();
         }
 
@@ -129,8 +144,40 @@ namespace Platformer.Mechanics
             targetVelocity = move * maxSpeed;
         }
 
-        public enum JumpState
+        protected virtual void Shoot()
         {
+            
+
+            if (timer != 0)
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                    timer = 0;
+            }
+
+            if (Input.GetButton("Fire1"))
+            {
+                if (timer == 0)
+                {
+                    timer = interval;
+                    // StartCoroutine(FindObjectOfType<CameraController>().CameraShake(0.4f,0.4f));
+                    animator.SetTrigger("Shoot");
+
+                    // GameObject bullet = Instantiate(bulletPrefab, muzzlePos.position, Quaternion.identity);
+                    GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
+                    muzzlePos.x = transform.position.x + Mathf.Sign(move.x) * 0.9f;
+                    muzzlePos.y = transform.position.y;
+                    bullet.transform.position = muzzlePos;
+                    Debug.Log("Horizontal"+Input.GetAxis("Horizontal"));
+                    Debug.Log(new Vector2(1, 0) * direction);
+                    bullet.GetComponent<Bullet>().SetSpeed( new Vector2(1,0)*direction);
+
+                }
+            }
+        }
+
+        public enum JumpState
+        {   
             Grounded,
             PrepareToJump,
             Jumping,
