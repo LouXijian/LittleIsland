@@ -1,9 +1,9 @@
 using System;
-using Platformer.Gameplay;
+using LittleIsland.Gameplay;
 using UnityEngine;
-using static Platformer.Core.Simulation;
+using static LittleIsland.Core.Simulation;
 
-namespace Platformer.Mechanics
+namespace LittleIsland.Mechanics
 {
     /// <summary>
     /// Represebts the current vital statistics of some game entity.
