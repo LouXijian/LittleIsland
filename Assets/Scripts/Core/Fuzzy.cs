@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LittleIsland.Core
+namespace Platformer.Core
 {
     /// <summary>
     /// Fuzzy provides methods for using values +- an amount of random deviation, or fuzz.

@@ -1,8 +1,8 @@
-using LittleIsland.Core;
-using LittleIsland.Mechanics;
-using static LittleIsland.Core.Simulation;
+using Platformer.Core;
+using Platformer.Mechanics;
+using static Platformer.Core.Simulation;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// Fired when the player health reaches 0. This usually would result in a 

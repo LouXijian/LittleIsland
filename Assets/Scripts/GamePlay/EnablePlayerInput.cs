@@ -1,14 +1,14 @@
-using LittleIsland.Core;
-using LittleIsland.Model;
+using Platformer.Core;
+using Platformer.Model;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// This event is fired when user input should be enabled.
     /// </summary>
     public class EnablePlayerInput : Simulation.Event<EnablePlayerInput>
     {
-        LittleIslandModel model = Simulation.GetModel<LittleIslandModel>();
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {

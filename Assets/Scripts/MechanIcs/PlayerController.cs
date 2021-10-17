@@ -1,12 +1,12 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using LittleIsland.Gameplay;
-using static LittleIsland.Core.Simulation;
-using LittleIsland.Model;
-using LittleIsland.Core;
+using Platformer.Gameplay;
+using static Platformer.Core.Simulation;
+using Platformer.Model;
+using Platformer.Core;
 
-namespace LittleIsland.Mechanics
+namespace Platformer.Mechanics
 {
     /// <summary>
     /// This is the main class used to implement control of the player.
@@ -29,10 +29,8 @@ namespace LittleIsland.Mechanics
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
-        /*internal new*/
-        public Collider2D collider2d;
-        /*internal new*/
-        public AudioSource audioSource;
+        /*internal new*/ public Collider2D collider2d;
+        /*internal new*/ public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
 

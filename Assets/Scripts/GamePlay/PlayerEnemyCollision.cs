@@ -1,10 +1,10 @@
-using LittleIsland.Core;
-using LittleIsland.Mechanics;
-using LittleIsland.Model;
+using Platformer.Core;
+using Platformer.Mechanics;
+using Platformer.Model;
 using UnityEngine;
-using static LittleIsland.Core.Simulation;
+using static Platformer.Core.Simulation;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
 
     /// <summary>
@@ -16,7 +16,7 @@ namespace LittleIsland.Gameplay
         public EnemyController enemy;
         public PlayerController player;
 
-        LittleIslandModel model = Simulation.GetModel<LittleIslandModel>();
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {

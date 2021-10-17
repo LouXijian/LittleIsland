@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace LittleIsland.Mechanics
+namespace Platformer.Mechanics
 {
     /// <summary>
     /// This component is used to create a patrol path, two points which enemies will move between.

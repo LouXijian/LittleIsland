@@ -1,7 +1,7 @@
-using LittleIsland.Mechanics;
+using Platformer.Mechanics;
 using UnityEngine;
 
-namespace LittleIsland.Model
+namespace Platformer.Model
 {
     /// <summary>
     /// The main model containing needed data to implement a platformer style 

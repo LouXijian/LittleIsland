@@ -1,7 +1,7 @@
-using LittleIsland.Core;
-using LittleIsland.Mechanics;
+using Platformer.Core;
+using Platformer.Mechanics;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// Fired when the player performs a Jump.

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using LittleIsland.Core;
-using LittleIsland.Model;
+using Platformer.Core;
+using Platformer.Model;
 using UnityEngine;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// Fired when the player has died.
@@ -12,7 +12,7 @@ namespace LittleIsland.Gameplay
     /// <typeparam name="PlayerDeath"></typeparam>
     public class PlayerDeath : Simulation.Event<PlayerDeath>
     {
-        LittleIslandModel model = Simulation.GetModel<LittleIslandModel>();
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {

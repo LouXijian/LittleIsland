@@ -1,8 +1,8 @@
-using LittleIsland.Core;
-using LittleIsland.Mechanics;
-using LittleIsland.Model;
+using Platformer.Core;
+using Platformer.Mechanics;
+using Platformer.Model;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// Fired when a player enters a trigger with a DeathZone component.
@@ -12,7 +12,7 @@ namespace LittleIsland.Gameplay
     {
         public DeathZone deathzone;
 
-        LittleIslandModel model = Simulation.GetModel<LittleIslandModel>();
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public override void Execute()
         {

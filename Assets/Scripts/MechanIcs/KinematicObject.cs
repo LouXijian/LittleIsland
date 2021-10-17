@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LittleIsland.Mechanics
+namespace Platformer.Mechanics
 {
     /// <summary>
     /// Implements game physics for some in game entity.

@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using LittleIsland.Core;
-using LittleIsland.Model;
+using Platformer.Core;
+using Platformer.Model;
 using UnityEngine;
 
-namespace LittleIsland.Mechanics
+namespace Platformer.Mechanics
 {
     /// <summary>
     /// AnimationController integrates physics and animation. It is generally used for simple enemy animation.

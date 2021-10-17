@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace LittleIsland.Core
+namespace Platformer.Core
 {
     /// <summary>
     /// The Simulation class implements the discrete event simulator pattern.

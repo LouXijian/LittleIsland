@@ -1,4 +1,4 @@
-﻿namespace LittleIsland.Core
+﻿namespace Platformer.Core
 {
     public static partial class Simulation
     {

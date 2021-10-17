@@ -1,7 +1,7 @@
-using LittleIsland.Core;
-using LittleIsland.Mechanics;
+using Platformer.Core;
+using Platformer.Mechanics;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// Fired when the health component on an enemy has a hitpoint value of  0.

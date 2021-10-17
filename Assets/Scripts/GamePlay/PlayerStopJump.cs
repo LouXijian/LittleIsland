@@ -1,7 +1,7 @@
-using LittleIsland.Core;
-using LittleIsland.Mechanics;
+using Platformer.Core;
+using Platformer.Mechanics;
 
-namespace LittleIsland.Gameplay
+namespace Platformer.Gameplay
 {
     /// <summary>
     /// Fired when the Jump Input is deactivated by the user, cancelling the upward velocity of the jump.
