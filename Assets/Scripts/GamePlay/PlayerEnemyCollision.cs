@@ -20,6 +20,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
+            Debug.Log("Bang!");
             var willHurtEnemy = player.Bounds.center.y >= enemy.Bounds.max.y;
 
             if (willHurtEnemy)
