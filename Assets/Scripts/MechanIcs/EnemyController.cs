@@ -51,7 +51,8 @@ namespace Platformer.Mechanics
             if( bullet != null)
             {
                 Debug.Log("Triggerd");
-                var ev = 
+                var ev = Schedule<EnemyDeath>();
+                ev.enemy = this;
             }
         }
 

@@ -1,5 +1,6 @@
 using Platformer.Core;
 using Platformer.Mechanics;
+using UnityEngine;
 
 namespace Platformer.Gameplay
 {
@@ -13,7 +14,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
-            //enemy._collider.enabled = false;
+            enemy._collider.enabled = false;
             enemy.control.enabled = false;
             if (enemy._audio && enemy.ouch)
                 enemy._audio.PlayOneShot(enemy.ouch);
