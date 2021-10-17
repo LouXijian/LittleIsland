@@ -70,6 +70,7 @@ namespace Platformer.Mechanics
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
+                Shoot();
             }
             else
             {
@@ -83,7 +84,7 @@ namespace Platformer.Mechanics
             {
                 direction = -1;
             }
-            Shoot();
+            
             base.Update();
         }
 

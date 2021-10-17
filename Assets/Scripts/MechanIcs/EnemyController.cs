@@ -33,10 +33,10 @@ namespace Platformer.Mechanics
 
         void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.Log("Dong!");
             var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
+                Debug.Log("Player!");
                 var ev = Schedule<PlayerEnemyCollision>();
                 ev.player = player;
                 ev.enemy = this;
