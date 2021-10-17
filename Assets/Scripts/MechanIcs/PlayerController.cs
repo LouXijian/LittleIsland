@@ -33,20 +33,20 @@ namespace LittleIsland.Mechanics
         public Collider2D collider2d;
         /*internal new*/
         public AudioSource audioSource;
-       // public Health health;
+        public Health health;
         public bool controlEnabled = true;
 
         bool jump;
         Vector2 move;
         SpriteRenderer spriteRenderer;
         internal Animator animator;
-       // readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
+        readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public Bounds Bounds => collider2d.bounds;
 
         void Awake()
         {
-           // health = GetComponent<Health>();
+            health = GetComponent<Health>();
             audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();

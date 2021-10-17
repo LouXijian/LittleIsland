@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Platformer.Mechanics
+namespace LittleIsland.Mechanics
 {
     public partial class PatrolPath
     {
