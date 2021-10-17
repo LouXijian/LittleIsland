@@ -38,7 +38,7 @@ namespace LittleIsland.Mechanics
 
         SpriteRenderer spriteRenderer;
         Animator animator;
-        LittleIslandModel model = Simulation.GetModel<LittleIslandModel>();
+        PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         protected virtual void Awake()
         {
