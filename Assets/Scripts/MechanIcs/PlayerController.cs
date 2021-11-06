@@ -141,7 +141,7 @@ namespace Platformer.Mechanics
 
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
-
+            animator.SetFloat("Speed", Mathf.Abs(velocity.x));
             targetVelocity = move * maxSpeed;
         }
 
@@ -162,7 +162,7 @@ namespace Platformer.Mechanics
                 {
                     timer = interval;
                     // StartCoroutine(FindObjectOfType<CameraController>().CameraShake(0.4f,0.4f));
-                    animator.SetTrigger("IsShooting");
+                    animator.SetBool("IsShooting", true);
 
                     // GameObject bullet = Instantiate(bulletPrefab, muzzlePos.position, Quaternion.identity);
                     GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
@@ -172,7 +172,7 @@ namespace Platformer.Mechanics
                     Debug.Log("Horizontal"+Input.GetAxis("Horizontal"));
                     Debug.Log(new Vector2(1, 0) * direction);
                     bullet.GetComponent<Bullet>().SetSpeed( new Vector2(1,0)*direction);
-
+                    animator.SetBool("IsShooting", false);
                 }
             }
         }

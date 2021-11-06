@@ -47,6 +47,7 @@ namespace Platformer.Mechanics
         public void Bounce(float value)
         {
             velocity.y = value;
+        
         }
 
         /// <summary>
