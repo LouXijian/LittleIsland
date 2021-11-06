@@ -139,18 +139,18 @@ namespace Platformer.Mechanics
             else if (move.x < -0.01f)
                 spriteRenderer.flipX = true;
 
-            animator.SetBool("grounded", IsGrounded);
-            animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+          
             animator.SetFloat("Speed", Mathf.Abs(velocity.x));
             targetVelocity = move * maxSpeed;
         }
 
         protected virtual void Shoot()
         {
-            
 
+            
             if (timer != 0)
             {
+                animator.SetBool("IsShooting", false);
                 timer -= Time.deltaTime;
                 if (timer <= 0)
                     timer = 0;
@@ -158,20 +158,23 @@ namespace Platformer.Mechanics
 
             if (Input.GetButton("Fire1"))
             {
+
                 if (timer == 0)
                 {
+                    animator.SetBool("IsShooting", true);
                     timer = interval;
                     // StartCoroutine(FindObjectOfType<CameraController>().CameraShake(0.4f,0.4f));
-                    animator.SetBool("IsShooting", true);
+                    
                     // GameObject bullet = Instantiate(bulletPrefab, muzzlePos.position, Quaternion.identity);
                     GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
                     muzzlePos.x = transform.position.x + direction * 0.9f;
                     muzzlePos.y = transform.position.y;
                     bullet.transform.position = muzzlePos;
                     bullet.GetComponent<Bullet>().SetSpeed( new Vector2(1,0)*direction);
-                    animator.SetBool("IsShooting", false);
-                }
+                   
+                }  
             }
+            
         }
 
         public enum JumpState
