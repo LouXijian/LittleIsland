@@ -168,8 +168,6 @@ namespace Platformer.Mechanics
                     muzzlePos.x = transform.position.x + direction * 0.9f;
                     muzzlePos.y = transform.position.y;
                     bullet.transform.position = muzzlePos;
-                    Debug.Log("Horizontal"+Input.GetAxis("Horizontal"));
-                    Debug.Log(new Vector2(1, 0) * direction);
                     bullet.GetComponent<Bullet>().SetSpeed( new Vector2(1,0)*direction);
                     animator.SetBool("IsShooting", false);
                 }
