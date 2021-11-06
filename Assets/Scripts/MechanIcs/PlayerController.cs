@@ -163,7 +163,6 @@ namespace Platformer.Mechanics
                     timer = interval;
                     // StartCoroutine(FindObjectOfType<CameraController>().CameraShake(0.4f,0.4f));
                     animator.SetBool("IsShooting", true);
-
                     // GameObject bullet = Instantiate(bulletPrefab, muzzlePos.position, Quaternion.identity);
                     GameObject bullet = ObjectPool.Instance.GetObject(bulletPrefab);
                     muzzlePos.x = transform.position.x + direction * 0.9f;
